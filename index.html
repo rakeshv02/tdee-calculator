@@ -1,36 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TDEE Calculator — Total Daily Energy Expenditure & Calorie Calculator | Tabutility</title>
-    <meta name="description" content="Free TDEE and calorie calculator. Calculate your Total Daily Energy Expenditure, BMR, and exact daily calories for weight loss, maintenance, or muscle gain. Includes macro breakdown. No sign-up." />
-    <meta name="keywords" content="tdee calculator, calorie calculator, bmr calculator, total daily energy expenditure, calories to lose weight, calories to gain muscle, macro calculator, how many calories should i eat" />
-    <link rel="canonical" href="https://tdee-calculator.tabutility.com/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://tdee-calculator.tabutility.com/" />
-    <meta property="og:title" content="TDEE Calculator — Total Daily Energy Expenditure & Calorie Calculator" />
-    <meta property="og:description" content="Calculate your TDEE, BMR, and daily calories for your goal. Includes macro breakdown. Free, no sign-up." />
-    <meta property="og:site_name" content="Tabutility" />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="TDEE Calculator — Calorie Calculator for Any Goal" />
-    <meta name="twitter:description" content="Calculate your TDEE, BMR, and daily calories for weight loss or muscle gain. Free, no sign-up." />
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>" />
-    <meta name="robots" content="index, follow" />
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7039091592734005" crossorigin="anonymous"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-78VZWJ5B1W"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-78VZWJ5B1W');
-    </script>
-    <script type="application/ld+json">
-    { "@context": "https://schema.org", "@type": "WebApplication", "name": "TDEE Calculator", "url": "https://tdee-calculator.tabutility.com", "description": "Free TDEE and calorie calculator. Calculate your Total Daily Energy Expenditure and BMR for any goal.", "applicationCategory": "HealthApplication", "operatingSystem": "Any", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }, "provider": { "@type": "Organization", "name": "Tabutility", "url": "https://tabutility.com" } }
-    </script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>TDEE &amp; Calorie Calculator — Tabutility</title>
+<meta name="description" content="Free TDEE calculator. Calculate your Total Daily Energy Expenditure and daily calorie needs based on your stats and activity level."/>
+<meta name="keywords" content="tdee calculator, calorie calculator, total daily energy expenditure, bmr calculator, daily calories needed"/>
+<link rel="canonical" href="https://tdee-calculator.tabutility.com/"/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>"/>
+<meta property="og:title" content="TDEE &amp; Calorie Calculator"/>
+<meta property="og:description" content="Free TDEE calculator. Calculate your Total Daily Energy Expenditure and daily calorie needs."/>
+<meta property="og:url" content="https://tdee-calculator.tabutility.com/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="Tabutility"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="TDEE &amp; Calorie Calculator"/>
+<meta name="twitter:description" content="Free TDEE calculator. Calculate your Total Daily Energy Expenditure and daily calorie needs."/>
+<meta name="robots" content="index, follow"/>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-78VZWJ5B1W"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-78VZWJ5B1W');</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7039091592734005" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"TDEE & Calorie Calculator","url":"https://tdee-calculator.tabutility.com/","description":"Free TDEE calculator. Calculate your Total Daily Energy Expenditure and daily calorie needs based on your stats and activity level.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"Tabutility","url":"https://tabutility.com"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tabutility","item":"https://tabutility.com"},{"@type":"ListItem","position":2,"name":"Wellness","item":"https://tabutility.com"},{"@type":"ListItem","position":3,"name":"TDEE & Calorie Calculator","item":"https://tdee-calculator.tabutility.com/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is TDEE?","acceptedAnswer":{"@type":"Answer","text":"Total Daily Energy Expenditure — the total calories you burn per day including exercise and daily activity."}},{"@type":"Question","name":"What formula is used?","acceptedAnswer":{"@type":"Answer","text":"The Mifflin-St Jeor equation, widely considered the most accurate BMR formula."}},{"@type":"Question","name":"Is the TDEE Calculator free?","acceptedAnswer":{"@type":"Answer","text":"Yes — completely free, no sign-up needed."}},{"@type":"Question","name":"How accurate is it?","acceptedAnswer":{"@type":"Answer","text":"It's an estimate — individual metabolism varies. Use it as a starting point."}}]}</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0f172a;color:#f1f5f9;min-height:100vh}
+nav{background:#1e293b;border-bottom:1px solid #334155;padding:14px 24px;display:flex;align-items:center;gap:16px}
+nav a{color:#94a3b8;text-decoration:none;font-size:14px}nav a:hover{color:#f1f5f9}
+nav .brand{color:#38bdf8;font-weight:700;font-size:18px}
+.ad-banner{background:#1e293b;border-bottom:1px solid #334155;padding:4px;text-align:center}
+#app{max-width:700px;margin:8px auto;padding:0 16px 40px}
+h1{font-size:26px;font-weight:800;margin:24px 0 4px;text-align:center}
+.subtitle{color:#94a3b8;text-align:center;font-size:14px;margin-bottom:24px}
+.card{background:#1e293b;border:1px solid #334155;border-radius:14px;padding:24px;margin-bottom:16px}
+.toggle-row{display:flex;gap:8px;margin-bottom:20px;justify-content:center}
+.toggle-btn{padding:8px 20px;border-radius:8px;border:1px solid #334155;background:#0f172a;color:#94a3b8;cursor:pointer;font-size:14px;font-weight:600;transition:all .2s}
+.toggle-btn.active{background:#38bdf8;border-color:#38bdf8;color:#0f172a}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-group{display:flex;flex-direction:column;gap:6px}
+.form-group label{font-size:12px;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em}
+.form-group input,.form-group select{background:#0f172a;border:1px solid #334155;color:#f1f5f9;padding:10px 12px;border-radius:8px;font-size:15px}
+.form-group input:focus,.form-group select:focus{outline:none;border-color:#38bdf8}
+.gender-row{display:flex;gap:8px}
+.gender-btn{flex:1;padding:10px;border-radius:8px;border:1px solid #334155;background:#0f172a;color:#94a3b8;cursor:pointer;font-size:14px;font-weight:600;transition:all .2s}
+.gender-btn.active{background:#8b5cf6;border-color:#8b5cf6;color:#fff}
+.calc-btn{width:100%;padding:14px;background:#38bdf8;color:#0f172a;border:none;border-radius:10px;font-size:16px;font-weight:700;cursor:pointer;margin-top:16px;transition:background .2s}
+.calc-btn:hover{background:#0ea5e9}
+.results{display:none}
+.result-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:16px}
+.result-card{background:#0f172a;border:1px solid #334155;border-radius:10px;padding:16px;text-align:center}
+.result-card .val{font-size:28px;font-weight:800;color:#38bdf8}
+.result-card .lbl{font-size:12px;color:#94a3b8;margin-top:4px}
+.goal-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+.goal-card{background:#0f172a;border:1px solid #334155;border-radius:10px;padding:14px;text-align:center}
+.goal-card .gcal{font-size:20px;font-weight:700}
+.goal-card .glbl{font-size:11px;color:#94a3b8;margin-top:3px}
+.macro-bar{display:flex;gap:0;border-radius:8px;overflow:hidden;height:20px;margin:12px 0}
+.macro-bar div{display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700}
+.macro-row{display:flex;justify-content:space-between;font-size:13px;margin-top:8px}
+.macro-row span{color:#94a3b8}
+@media(max-width:480px){.form-grid{grid-template-columns:1fr}.goal-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav><span class="brand">⚡ Tabutility</span><a href="https://tabutility.com">← All Tools</a></nav>
+<div class="ad-banner"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7039091592734005" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+<div id="app">
+  <h1>🔥 TDEE &amp; Calorie Calculator</h1>
+  <p class="subtitle">Calculate your Total Daily Energy Expenditure using Mifflin-St Jeor formula.</p>
+
+  <div class="card">
+    <div class="toggle-row">
+      <button class="toggle-btn active" id="metricBtn" onclick="setUnit('metric')">Metric (kg/cm)</button>
+      <button class="toggle-btn" id="imperialBtn" onclick="setUnit('imperial')">Imperial (lbs/ft)</button>
+    </div>
+    <div style="margin-bottom:16px">
+      <div style="font-size:12px;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px">Gender</div>
+      <div class="gender-row">
+        <button class="gender-btn active" id="maleBtn" onclick="setGender('male')">♂ Male</button>
+        <button class="gender-btn" id="femaleBtn" onclick="setGender('female')">♀ Female</button>
+      </div>
+    </div>
+    <div class="form-grid">
+      <div class="form-group">
+        <label>Age</label>
+        <input type="number" id="age" value="30" min="10" max="100" placeholder="Age"/>
+      </div>
+      <div class="form-group">
+        <label>Weight (<span id="wUnit">kg</span>)</label>
+        <input type="number" id="weight" value="70" placeholder="Weight"/>
+      </div>
+      <div class="form-group" id="heightMetricGroup">
+        <label>Height (cm)</label>
+        <input type="number" id="heightCm" value="175" placeholder="cm"/>
+      </div>
+      <div class="form-group" id="heightImperialGroup" style="display:none">
+        <label>Height</label>
+        <div style="display:flex;gap:8px">
+          <input type="number" id="heightFt" value="5" placeholder="ft" style="background:#0f172a;border:1px solid #334155;color:#f1f5f9;padding:10px 12px;border-radius:8px;font-size:15px;width:50%"/>
+          <input type="number" id="heightIn" value="9" placeholder="in" style="background:#0f172a;border:1px solid #334155;color:#f1f5f9;padding:10px 12px;border-radius:8px;font-size:15px;width:50%"/>
+        </div>
+      </div>
+      <div class="form-group" style="grid-column:1/-1">
+        <label>Activity Level</label>
+        <select id="activity">
+          <option value="1.2">Sedentary (little or no exercise)</option>
+          <option value="1.375">Lightly active (1-3 days/week)</option>
+          <option value="1.55" selected>Moderately active (3-5 days/week)</option>
+          <option value="1.725">Very active (6-7 days/week)</option>
+          <option value="1.9">Extra active (very hard exercise/physical job)</option>
+        </select>
+      </div>
+      <div class="form-group" style="grid-column:1/-1">
+        <label>Goal</label>
+        <select id="goal">
+          <option value="lose">Lose Weight</option>
+          <option value="maintain" selected>Maintain Weight</option>
+          <option value="gain">Gain Weight</option>
+        </select>
+      </div>
+    </div>
+    <button class="calc-btn" onclick="calculate()">Calculate TDEE &amp; Calories</button>
+  </div>
+
+  <div class="card results" id="results">
+    <div class="result-grid">
+      <div class="result-card">
+        <div class="val" id="bmrVal">—</div>
+        <div class="lbl">BMR (kcal/day)</div>
+      </div>
+      <div class="result-card">
+        <div class="val" id="tdeeVal">—</div>
+        <div class="lbl">TDEE (kcal/day)</div>
+      </div>
+    </div>
+    <div style="font-size:13px;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px">Calorie Targets</div>
+    <div class="goal-grid">
+      <div class="goal-card">
+        <div class="gcal" style="color:#ef4444" id="loseCalVal">—</div>
+        <div class="glbl">Lose Weight<br>(-0.5kg/week)</div>
+      </div>
+      <div class="goal-card" style="border-color:#38bdf8">
+        <div class="gcal" style="color:#38bdf8" id="maintainCalVal">—</div>
+        <div class="glbl">Maintain Weight</div>
+      </div>
+      <div class="goal-card">
+        <div class="gcal" style="color:#22c55e" id="gainCalVal">—</div>
+        <div class="glbl">Gain Weight<br>(+0.5kg/week)</div>
+      </div>
+    </div>
+    <div style="margin-top:20px">
+      <div style="font-size:13px;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px">Estimated Macros</div>
+      <div class="macro-bar">
+        <div style="width:30%;background:#3b82f6;color:#fff">Protein</div>
+        <div style="width:40%;background:#f59e0b;color:#fff">Carbs</div>
+        <div style="width:30%;background:#ef4444;color:#fff">Fat</div>
+      </div>
+      <div class="macro-row">
+        <span>🥩 Protein: <strong id="proteinVal" style="color:#3b82f6">—</strong></span>
+        <span>🍚 Carbs: <strong id="carbsVal" style="color:#f59e0b">—</strong></span>
+        <span>🥑 Fat: <strong id="fatVal" style="color:#ef4444">—</strong></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="max-width:860px;margin-left:auto;margin-right:auto;margin-top:24px;margin-bottom:8px;padding:0 16px">
+  <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:20px 24px">
+    <h2 style="font-size:15px;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em;margin-bottom:14px">Related Tools</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px">
+      <a href="https://bmi-calculator.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
+        <div style="font-size:13px;font-weight:600;color:#f1f5f9">BMI Calculator</div>
+        <div style="font-size:11px;color:#94a3b8;margin-top:2px">Wellness</div>
+      </a>
+      <a href="https://body-fat-calculator.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
+        <div style="font-size:13px;font-weight:600;color:#f1f5f9">Body Fat Calculator</div>
+        <div style="font-size:11px;color:#94a3b8;margin-top:2px">Wellness</div>
+      </a>
+      <a href="https://water-intake-calculator.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
+        <div style="font-size:13px;font-weight:600;color:#f1f5f9">Water Intake Calculator</div>
+        <div style="font-size:11px;color:#94a3b8;margin-top:2px">Wellness</div>
+      </a>
+      <a href="https://sleep-calculator.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
+        <div style="font-size:13px;font-weight:600;color:#f1f5f9">Sleep Calculator</div>
+        <div style="font-size:11px;color:#94a3b8;margin-top:2px">Wellness</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div style="max-width:860px;margin-left:auto;margin-right:auto;margin-top:8px;margin-bottom:24px;padding:0 16px">
+  <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:20px 24px">
+    <h2 style="font-size:15px;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px">Frequently Asked Questions</h2>
+    <div style="border-bottom:1px solid rgba(255,255,255,0.08);padding:14px 0">
+      <div style="font-size:14px;font-weight:600;color:#f1f5f9;margin-bottom:6px">What is TDEE?</div>
+      <div style="font-size:13px;color:#94a3b8;line-height:1.5">Total Daily Energy Expenditure — the total calories you burn per day including exercise and daily activity.</div>
+    </div>
+    <div style="border-bottom:1px solid rgba(255,255,255,0.08);padding:14px 0">
+      <div style="font-size:14px;font-weight:600;color:#f1f5f9;margin-bottom:6px">What formula is used?</div>
+      <div style="font-size:13px;color:#94a3b8;line-height:1.5">The Mifflin-St Jeor equation, widely considered the most accurate BMR formula.</div>
+    </div>
+    <div style="border-bottom:1px solid rgba(255,255,255,0.08);padding:14px 0">
+      <div style="font-size:14px;font-weight:600;color:#f1f5f9;margin-bottom:6px">Is this free?</div>
+      <div style="font-size:13px;color:#94a3b8;line-height:1.5">Yes — completely free, no sign-up needed.</div>
+    </div>
+    <div style="padding:14px 0">
+      <div style="font-size:14px;font-weight:600;color:#f1f5f9;margin-bottom:6px">How accurate is it?</div>
+      <div style="font-size:13px;color:#94a3b8;line-height:1.5">It's an estimate — individual metabolism varies. Use it as a starting point and consult a nutritionist for personalised advice.</div>
+    </div>
+  </div>
+</div>
+
+<div style="text-align:center;padding:8px">
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7039091592734005" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+</div>
+
+<script>
+let unit = 'metric';
+let gender = 'male';
+
+function setUnit(u) {
+  unit = u;
+  document.getElementById('metricBtn').classList.toggle('active', u === 'metric');
+  document.getElementById('imperialBtn').classList.toggle('active', u === 'imperial');
+  document.getElementById('heightMetricGroup').style.display = u === 'metric' ? '' : 'none';
+  document.getElementById('heightImperialGroup').style.display = u === 'imperial' ? '' : 'none';
+  document.getElementById('wUnit').textContent = u === 'metric' ? 'kg' : 'lbs';
+  if (u === 'imperial') { document.getElementById('weight').value = 154; }
+  else { document.getElementById('weight').value = 70; }
+}
+
+function setGender(g) {
+  gender = g;
+  document.getElementById('maleBtn').classList.toggle('active', g === 'male');
+  document.getElementById('femaleBtn').classList.toggle('active', g === 'female');
+}
+
+function calculate() {
+  const age = parseFloat(document.getElementById('age').value) || 30;
+  let weightKg, heightCm;
+  if (unit === 'metric') {
+    weightKg = parseFloat(document.getElementById('weight').value) || 70;
+    heightCm = parseFloat(document.getElementById('heightCm').value) || 175;
+  } else {
+    const lbs = parseFloat(document.getElementById('weight').value) || 154;
+    weightKg = lbs * 0.453592;
+    const ft = parseFloat(document.getElementById('heightFt').value) || 5;
+    const inc = parseFloat(document.getElementById('heightIn').value) || 9;
+    heightCm = (ft * 12 + inc) * 2.54;
+  }
+  const activityFactor = parseFloat(document.getElementById('activity').value);
+
+  // Mifflin-St Jeor
+  let bmr;
+  if (gender === 'male') bmr = 10 * weightKg + 6.25 * heightCm - 5 * age + 5;
+  else bmr = 10 * weightKg + 6.25 * heightCm - 5 * age - 161;
+
+  const tdee = bmr * activityFactor;
+  const goal = document.getElementById('goal').value;
+  const targetCal = goal === 'lose' ? tdee - 500 : goal === 'gain' ? tdee + 500 : tdee;
+
+  document.getElementById('bmrVal').textContent = Math.round(bmr);
+  document.getElementById('tdeeVal').textContent = Math.round(tdee);
+  document.getElementById('loseCalVal').textContent = Math.round(tdee - 500);
+  document.getElementById('maintainCalVal').textContent = Math.round(tdee);
+  document.getElementById('gainCalVal').textContent = Math.round(tdee + 500);
+
+  const protein = Math.round(targetCal * 0.30 / 4);
+  const carbs = Math.round(targetCal * 0.40 / 4);
+  const fat = Math.round(targetCal * 0.30 / 9);
+  document.getElementById('proteinVal').textContent = protein + 'g';
+  document.getElementById('carbsVal').textContent = carbs + 'g';
+  document.getElementById('fatVal').textContent = fat + 'g';
+
+  document.getElementById('results').style.display = 'block';
+  document.getElementById('results').scrollIntoView({behavior:'smooth'});
+}
+</script>
+</body>
 </html>
