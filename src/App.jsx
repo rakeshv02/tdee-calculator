@@ -80,7 +80,7 @@ export default function App() {
       </div>
 
       <div style={{ maxWidth: "760px", margin: "0 auto", padding: "32px 16px" }}>
-        <h1 style={{ fontSize: "30px", fontWeight: "900", color: "#0f172a", margin: "0 0 6px" }}>TDEE & Calorie Calculator</h1>
+        <h1 style={{ fontSize: "30px", fontWeight: "900", color: "#f8f7f4", margin: "0 0 6px" }}>TDEE & Calorie Calculator</h1>
         <p style={{ fontSize: "15px", color: "#6b7280", margin: "0 0 28px" }}>Calculate your Total Daily Energy Expenditure, BMR, and exact calories for your goal.</p>
 
         {/* Unit + Gender */}
@@ -143,7 +143,7 @@ export default function App() {
               {activityLevels.map(al => (
                 <button key={al.id} onClick={() => setActivity(al.id)} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "12px 16px", borderRadius: "10px", border: `1.5px solid ${activity === al.id ? "#6366f1" : "#e5e7eb"}`, background: activity === al.id ? "#f5f3ff" : "#fff", cursor: "pointer", textAlign: "left" }}>
                   <div>
-                    <span style={{ fontSize: "14px", fontWeight: "700", color: activity === al.id ? "#6366f1" : "#0f172a" }}>{al.label}</span>
+                    <span style={{ fontSize: "14px", fontWeight: "700", color: activity === al.id ? "#6366f1" : "#f8f7f4" }}>{al.label}</span>
                     <span style={{ fontSize: "12px", color: "#6b7280", marginLeft: "8px" }}>{al.desc}</span>
                   </div>
                   <span style={{ fontSize: "12px", fontWeight: "700", color: activity === al.id ? "#6366f1" : "#9ca3af" }}>×{al.mult}</span>
@@ -197,7 +197,7 @@ export default function App() {
 
             {/* Macros */}
             <div style={{ background: "#fff", borderRadius: "16px", padding: "24px", boxShadow: "0 1px 4px rgba(0,0,0,0.08)", marginBottom: "16px" }}>
-              <h2 style={{ margin: "0 0 16px", fontSize: "17px", fontWeight: "800", color: "#0f172a" }}>Recommended Macros</h2>
+              <h2 style={{ margin: "0 0 16px", fontSize: "17px", fontWeight: "800", color: "#f8f7f4" }}>Recommended Macros</h2>
               <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "12px" }}>
                 {[
                   { label: "Protein", value: Math.round(result.protein), unit: "g", cals: Math.round(result.protein * 4), color: "#6366f1", pct: Math.round((result.protein * 4 / result.targetCalories) * 100) },
@@ -215,7 +215,7 @@ export default function App() {
 
             {/* All goal calories */}
             <div style={{ background: "#fff", borderRadius: "16px", padding: "24px", boxShadow: "0 1px 4px rgba(0,0,0,0.08)", marginBottom: "32px" }}>
-              <h2 style={{ margin: "0 0 16px", fontSize: "17px", fontWeight: "800", color: "#0f172a" }}>Calories by Goal</h2>
+              <h2 style={{ margin: "0 0 16px", fontSize: "17px", fontWeight: "800", color: "#f8f7f4" }}>Calories by Goal</h2>
               {goals.map(g => (
                 <div key={g.id} onClick={() => setGoal(g.id)} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "12px 0", borderBottom: "1px solid #f3f4f6", cursor: "pointer" }}>
                   <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
